@@ -481,65 +481,6 @@ def evaluate_AgglomerativeClustering():
 
     return res
 
-def evaluate_RNBC():
-    res = []
-
-    dataset = datasets[0]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 14, min_size=0.1, par1= 0.5,use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[1]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 3, min_size=0.3, par1=0.5,use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[2]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 30, min_size=0.3, par1=0.5,use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[3]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 8, min_size=0.3, par1=0.5, use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[4]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 5, min_size=0.05, par1= 0.5,use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[5]
-    X, y = dataset
-    X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 9, min_size=0.3, par1=0.5, use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[6]
-    X, y = dataset
-    classes = RNBC(X, 3, min_size=0.1, par1=0.5, use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    dataset = datasets[7]
-    X, y = dataset
-    classes = RNBC(X, 13, min_size=0.3, par1=0.5, use_lower=False)
-    classes = classes - 1
-    res.append((X, classes, y))
-
-    return res
-
 def evaluate_DBSCAN():
     res = []
 
@@ -607,60 +548,61 @@ def evaluate_DBSCAN():
 
     return res
 
+
 def evaluate_RNBC_UPPER():
     res = []
 
     dataset = datasets[0]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 50, min_size=0.3, par1=0.9, use_lower=True)
+    classes = RNBC(X, 50, t=0.3, alpha=0.9, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[1]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 27, min_size=0.3, par1=0.5, use_lower=False)
+    classes = RNBC(X, 27, t=0.3, alpha=0.5, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
     
     dataset = datasets[2]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 50, min_size=0.3, par1=0.5, use_lower=False)
+    classes = RNBC(X, 50, t=0.3, alpha=0.5, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[3]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 8, min_size=0.3, par1=0.5, use_lower=False)
+    classes = RNBC(X, 8, t=0.3, alpha=0.5, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[4]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 4, min_size=0.025, par1=0.5, use_lower=False)
+    classes = RNBC(X, 4, t=0.025, alpha=0.5, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[5]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 15, min_size=0.3, par1=0.5, use_lower=False)
+    classes = RNBC(X, 15, t=0.3, alpha=0.5, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[6]
     X, y = dataset
-    classes = RNBC(X, 6, min_size=0.3, par1=0.1, use_lower=False)
+    classes = RNBC(X, 6, t=0.3, alpha=0.1, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[7]
     X, y = dataset
-    classes = RNBC(X, 30, min_size=0.3, par1=0.1, use_lower=False)
+    classes = RNBC(X, 30, t=0.3, alpha=0.1, use_lower=False)
     classes = classes - 1
     res.append((X, classes, y))
 
@@ -672,54 +614,55 @@ def evaluate_RNBC_LOWER():
     dataset = datasets[0]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 50, min_size=0.3, par1=0.9, use_lower=True)
+    classes = RNBC(X, 50, t=0.3, alpha=0.9, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
     
     dataset = datasets[1]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 27, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 27, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
     
     dataset = datasets[2]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 50, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 50, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
     
     dataset = datasets[3]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 8, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 8, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[4]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 4, min_size=0.025, par1=0.3, use_lower=True)
+    classes = RNBC(X, 4, t=0.025, alpha=0.3, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[5]
     X, y = dataset
     X = StandardScaler().fit_transform(X)
-    classes = RNBC(X, 15, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 15, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 
     dataset = datasets[6]
     X, y = dataset
-    classes = RNBC(X, 6, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 6, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 
+
     dataset = datasets[7]
     X, y = dataset
-    classes = RNBC(X, 30, min_size=0.3, par1=0.5, use_lower=True)
+    classes = RNBC(X, 30, t=0.3, alpha=0.5, use_lower=True)
     classes = classes - 1
     res.append((X, classes, y))
 

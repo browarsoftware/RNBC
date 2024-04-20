@@ -207,17 +207,19 @@ def calculate_clustering(nodes_dict, cm_help):
     return classes
 
 # Execute Rough neighborhood-based clustering
-def RNBC(X, edges_count, min_size=0.1, par1=0.5,use_lower=True,optimize_clusters=True):
+def RNBC(X, edges_count, t=0.1, alpha=0.5,use_lower=True,optimize_clusters=True):
     """
 
     :param X: dataset
     :param edges_count: number of edges in Rough neighborhood graph
-    :param min_size: minimal size of the cluster to be added
-    :param par1: scalling parameter in optimization function, should be in [0,1], only used when use_lower=True
+    :param t: minimal size of the cluster to be added (fraction of the dataset size)
+    :param alpha: scalling parameter in optimization function, should be in [0,1], only used when use_lower=True
     :param use_lower: use only lower approximation of clusters
     :param optimize_clusters: run clusters optimization (might remove some clusters, only used when use_lower=True)
     :return:
     """
+    min_size = t
+    par1 = alpha
     # Make Rough neighborhood graph
     my_graph = make_graph(X, edges_count)
     # Perform clustering, get lower approximation and border
