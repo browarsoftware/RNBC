@@ -8,6 +8,10 @@ Rough neighborhood graph: a method for proximity modeling and data clustering
 
 Examine range of clustering algorithm parameters to find the best configuration for certain dataset
 Results are output to the file. You must select dataset you want to process.
+
+Execution might take some time as well as exception messages may appear when evaluation scores are calculated.
+These are caused by a lack of solution, usually because the neighborhood is too small.
+Just stay calm and wait for the results :-)
 """
 
 import warnings
