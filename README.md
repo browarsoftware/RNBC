@@ -5,7 +5,7 @@
 Authors: [Tomasz Hachaj](https://home.agh.edu.pl/~thachaj/),
 [Jarosław Wąs](https://home.agh.edu.pl/~jarek/)
 
-In this paper we will introduce a novel concept of Rough distance graph as a tool for neighborhood modeling and data clustering. In contrary to previous researches we decided to use not directed by rather undirected graph which will be a convenient structure to perform community discovery algorithms. Also the approach proposed in this paper is is closer to spectral clustering from the perspective of dataset representation in as the graph structure. Our approach is also not a variation of rough fuzzy KMenas, the detected clusters are not concentric as well as we do not need to define a specific number of clusters we want to detect. We also use rough set inspired framework to represent proximity relation between objects pairs in the dataset. Our definition of neighborhood is distance-based, not approximation-based. Due to this fact we are able to process any dataset which objects reside in metrical space (there is a defined metric which allows objects pairwise comparison), not only categorical. We have validated our approach on various benchmark dataset achieving nearly perfect clustering results which overcome limitations of other popular algorithms. All required data and source codes of proposed method can be downloaded from online repository and the results presented in this paper can be reproduced.
+In this paper, we will introduce the novel concept of a rough neighborhood graph as a method for proximity modeling and data clustering. Contrary to previous research in the field of application of rough sets in graph theory, we decided to use an undirected graph, which will be a convenient structure to perform community discovery algorithms. Also, the approach proposed in this paper is closer to spectral clustering from the perspective of dataset representation. Our approach is also not a variation of rough fuzzy KMenas. The clusters detected by our method do not have to be concentric, and we do not need to define a specific number of clusters we want to discover. We also use a rough set-inspired framework to represent proximity relations between object pairs in the dataset. Our definition of neighborhood is distance-based, not approximation-based. Due to this fact, we are able to process any dataset in which objects are in metric space (there is a defined metric that allows pairwise comparison). We have validated our approach on various benchmark datasets, achieving nearly perfect clustering results that overcome the limitations of other popular algorithms. All required data and source codes for the proposed method can be downloaded from an online repository, and the results presented in this paper can be reproduced.
 
 
 Keywords: Rough sets, Clustering, Neighborhood approximation, Neighborhood graph
@@ -20,5 +20,10 @@ Keywords: Rough sets, Clustering, Neighborhood approximation, Neighborhood graph
 
 Run script [run.py](run.py), it will compare RNBC 
 with other popular clustering algorithms on benchmark datasets.
+
+Additionally, you can run script [find_parameters.py](find_parameters.py) 
+in order to evaluate DBSCAN, RNBC and RNBC (Only Lower) with large range 
+of configuration parameters 
+on selected benchmark datasets.
 
 ![res.jpeg](res.jpeg)
