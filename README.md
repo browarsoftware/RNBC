@@ -27,3 +27,26 @@ of configuration parameters
 on selected benchmark datasets.
 
 ![res.jpeg](res.jpeg)
+
+
+## Full text
+
+[https://www.sciencedirect.com/science/article/pii/S1568494625001000](https://www.sciencedirect.com/science/article/pii/S1568494625001000)
+
+## Cite as
+
+Tomasz Hachaj, Jarosław Wąs, Rough neighborhood graph: A method for proximity modeling and data clustering, Applied Soft Computing, Volume 171, 2025, 112789, ISSN 1568-4946, https://doi.org/10.1016/j.asoc.2025.112789
+
+Bibtex:
+
+@article{HACHAJ2025112789,\
+title = {Rough neighborhood graph: A method for proximity modeling and data clustering},\
+journal = {Applied Soft Computing},\
+volume = {171},\
+pages = {112789},\
+year = {2025},\
+issn = {1568-4946},\
+doi = {https://doi.org/10.1016/j.asoc.2025.112789},\
+url = {https://www.sciencedirect.com/science/article/pii/S1568494625001000},\
+author = {Tomasz Hachaj and Jarosław Wąs}
+}
